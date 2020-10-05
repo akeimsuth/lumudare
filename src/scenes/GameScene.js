@@ -17,10 +17,8 @@ import arrow2 from "../assets/arrow.png";
 // import pumpkinSound from "../assets/Pumpkin.wav";
 // import wolfSound from "../assets/wolf.wav";
 // import puppetSound from "../assets/puppet.wav";
-// import witchSound from "../assets/witch.wav";
-// import test from "../assets/test.mp3";
-
-
+ //import witchSound from "../assets/witch.mp3";
+ import bgMusic from "../assets/bg.mp3";
 
 
 
@@ -35,18 +33,22 @@ export default class GameScene extends Phaser.Scene {
         this.load.image("arrow", arrow);
         this.load.image("arrow1", arrow1);
         this.load.image("arrow2", arrow2);
+        this.load.audio("sound",bgMusic);
 
     }
 
 
     create(){
 
-
+        var music = this.sound.add("sound");
         const logo = this.add.image(400, 250, "logo");
         this.image = this.add.image(400, 250, "girl");
         this.button = this.add.image(100, 270, "arrow");
         this.button.setScale(0.2);
-        this.button.setAngle(180)
+        this.button.setAngle(180);
+        music.play();
+
+
         const self = this;
         this.button.setInteractive();
         this.button.on('pointerup',function(pointer){
