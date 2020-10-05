@@ -14,11 +14,11 @@ import arrow1 from "../assets/arrow.png";
 import arrow2 from "../assets/arrow.png";
 
 //sounds
-import pumpkinSound from "../assets/Pumpkin.wav";
-import wolfSound from "../assets/wolf.wav";
-import puppetSound from "../assets/puppet.wav";
-import witchSound from "../assets/witch.wav";
-import test from "../assets/test.mp3";
+// import pumpkinSound from "../assets/Pumpkin.wav";
+// import wolfSound from "../assets/wolf.wav";
+// import puppetSound from "../assets/puppet.wav";
+// import witchSound from "../assets/witch.wav";
+// import test from "../assets/test.mp3";
 
 
 
@@ -107,7 +107,7 @@ export class PuppetScene extends Phaser.Scene {
         this.load.image("puppetChat", puppetChat);
         //this.load.image("girl", girl);
         this.load.image("arrow1", arrow1);
-        this.load.audio("sound",test);
+      
     }
     create(){
 
@@ -115,8 +115,7 @@ export class PuppetScene extends Phaser.Scene {
         const puppetChat = this.add.image(400, 250, "puppetChat");
         const puppet = this.add.sprite(400, 250, "puppet");
         //const sprite1 = this.add.image(400, 50, "girl");
-        let soundSample = this.sound.add('sound');
-        soundSample.play();
+   
     
         const self = this;
         this.button1 = this.add.image(750, 270, "arrow1");
